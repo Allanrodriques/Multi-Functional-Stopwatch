@@ -1,0 +1,84 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+body {
+	background-color:#132C33;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+div.heading {
+	font-size: 2rem;
+	margin: 5rem 0 2rem 0;
+}
+.stopwatch {
+	background-color:#53B8BB;
+	border-radius: 10px;
+	padding: 20px 0;
+}
+.stopwatch span {
+	font-size: 2.5rem;
+}
+
+.buttons {
+	margin-top: 3rem;
+}
+.buttons button {
+	background: #F3F2C9;
+	border: 2px solid black;
+	padding: 10px 45px;
+	color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.startBtn {
+	width: 400px;
+}
+
+.lapBtn , .stopBtn {
+ 	display: none;
+ 	width: 200px;
+}
+.startBtn:hover , .lapBtn:hover ,.stopBtn:hover {
+        background: #3cc16e;
+    }
+.laps {
+	text-align: left;
+	margin-top: 2rem;
+}
+.laps p {
+	font-size: 1.3rem;
+	margin-bottom: 0.7rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .container {
+  	width:100%;
+  }
+  .startBtn {
+  	width: 200px;
+  }
+  .buttons {
+  	width: 100%;
+  }
+  .stopwatch{
+  	width: 300px;
+  	margin: auto;
+  }
+  .laps {
+  	margin-left: 15px;
+  }
+}
