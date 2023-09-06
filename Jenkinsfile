@@ -1,4 +1,4 @@
-
+@Library('my-shared-library') _             
 pipeline{
 parameters{
 
@@ -7,12 +7,13 @@ parameters{
 
     agent any
     stages{
-         
-        stage('Git Checkout'){
+         stage('Git Checkout'){
                     when { expression {  params.action == 'create' } }
-                    steps{
-                        checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/Allanrodriques/Multi-Functional-Stopwatch.git']]])
-                    }
+            steps{
+            gitCheckout(
+                branch: "main",
+                url: "https://github.com/Allanrodriques/Multi-Functional-Stopwatch.git"
+            )
             }
         }
         // stage('Clone Repository') {
@@ -41,3 +42,4 @@ parameters{
         // }
  
 }  
+}
